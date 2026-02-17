@@ -12,9 +12,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Check if required data files exist, if not run setup
-if not os.path.exists('data/processed/sentiment_analyzed_books.csv'):
+if not os.path.exists('../data/processed/sentiment_analyzed_books.csv'):
     print("Required data files not found. Running setup...")
-    import script.setup_data as setup_data
+    import setup_data
     setup_data.main()
 
 # Verify OpenAI API key is configured before proceeding
@@ -22,10 +22,10 @@ if not os.getenv('OPENAI_API_KEY'):
     raise ValueError("OPENAI_API_KEY not found in .env file. Please add your OpenAI API key.")
 
 # Load book metadata with sentiment analysis scores
-books = pd.read_csv('data/processed/sentiment_analyzed_books.csv')
+books = pd.read_csv('../data/processed/sentiment_analyzed_books.csv')
 
 # Configure vector database persistence
-persist_directory = "data/chroma_db"
+persist_directory = "../data/chroma_db"
 embeddings = OpenAIEmbeddings()
 
 # Create persist directory if it doesn't exist
@@ -40,7 +40,7 @@ if os.path.exists(os.path.join(persist_directory, "chroma.sqlite3")):
 else:
     # First run: create embeddings from raw documents
     print("Creating vector database (this may take a few minutes on first run)...")
-    raw_document = TextLoader('data/raw/tagged_description.txt').load()
+    raw_document = TextLoader('../data/raw/tagged_description.txt').load()
     text_splitter = CharacterTextSplitter(separator="\n", chunk_size=1000, chunk_overlap=0)
     documents = text_splitter.split_documents(raw_document)
     print(f"Processing {len(documents)} document chunks...")
