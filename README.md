@@ -25,13 +25,10 @@ An end-to-end book recommendation project that explores the Goodreads 100k datas
 - Dataset download and exploration using `kagglehub`.
 - Basic data quality checks and missing-value handling.
 - Visualization of missing data patterns with `seaborn` and `matplotlib`.
->>>>>>> 09770602cce82c177d51b9ac7274672edc63055d
 
 ## Project Structure
 
 ```
-.
-<<<<<<< HEAD
 ├── dashboard.py                           # Main Gradio application
 ├── requirements.txt                       # Python dependencies
 ├── README.md                              # This file
@@ -208,13 +205,14 @@ MIT License - feel free to use for personal or commercial projects
 
 Goodreads 100k Books Dataset  
 Source: https://www.kaggle.com/datasets/mdhamani/goodreads-books-100k
-=======
+
 ├── jupyter_setup.ipynb
 ├── requirements.txt
 └── notebook/
 	└── data_exploration.ipynb
-```
 
+
+```
 ## Getting Started
 
 ### 1) Create and activate a virtual environment
@@ -261,4 +259,3 @@ The download path is printed in the notebook so you can inspect the files locall
 ## Notes
 
 If you plan to use `langchain-openai` or other API-backed features, create a `.env` file and provide the required API keys before running those parts.
->>>>>>> 09770602cce82c177d51b9ac7274672edc63055d
