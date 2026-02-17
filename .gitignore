@@ -1,5 +1,6 @@
 ```gitignore
 .env
+<<<<<<< HEAD
 .venv
 __pycache__/
 .ipynb_checkpoints/
@@ -8,4 +9,6 @@ __pycache__/
 data/processed/*.csv
 data/raw/*.txt
 data/chroma_db/
+=======
+>>>>>>> 09770602cce82c177d51b9ac7274672edc63055d
 ```

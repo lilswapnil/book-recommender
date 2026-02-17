@@ -4,10 +4,16 @@ numpy
 matplotlib
 seaborn
 dotenv
+<<<<<<< HEAD
 gradio
 
 torch
 transformers
+=======
+
+transformers
+gradio
+>>>>>>> 09770602cce82c177d51b9ac7274672edc63055d
 ipywidgets
 langchain-community
 langchain-openai

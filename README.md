@@ -1,5 +1,6 @@
 # AI-Driven Book Recommender
 
+<<<<<<< HEAD
 A full-stack book recommendation system that uses semantic similarity search and sentiment analysis to deliver personalized book recommendations. Built on the Goodreads 100k dataset, the system features a modern Gradio web interface and persistent vector embeddings for fast inference.
 
 ## Features
@@ -17,11 +18,21 @@ A full-stack book recommendation system that uses semantic similarity search and
 - **Chroma**: Vector database with SQLite persistence
 - **Gradio**: User-friendly web interface
 - **Pandas**: Data manipulation and filtering
+=======
+An end-to-end book recommendation project that explores the Goodreads 100k dataset and sets the stage for building an AI-assisted recommender. The current work focuses on data loading, inspection, and cleaning in a Jupyter notebook, with dependencies included for later modeling and app UI work.
+
+## Highlights
+
+- Dataset download and exploration using `kagglehub`.
+- Basic data quality checks and missing-value handling.
+- Visualization of missing data patterns with `seaborn` and `matplotlib`.
+>>>>>>> 09770602cce82c177d51b9ac7274672edc63055d
 
 ## Project Structure
 
 ```
 .
+<<<<<<< HEAD
 ├── dashboard.py                           # Main Gradio application
 ├── requirements.txt                       # Python dependencies
 ├── README.md                              # This file
@@ -198,3 +209,57 @@ MIT License - feel free to use for personal or commercial projects
 
 Goodreads 100k Books Dataset  
 Source: https://www.kaggle.com/datasets/mdhamani/goodreads-books-100k
+=======
+├── jupyter_setup.ipynb
+├── requirements.txt
+└── notebook/
+	└── data_exploration.ipynb
+```
+
+## Getting Started
+
+### 1) Create and activate a virtual environment
+
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 2) Install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+### 3) Launch Jupyter Notebook
+
+```
+jupyter notebook
+```
+
+Open `notebook/data_exploration.ipynb` and run the cells top to bottom.
+
+## Dataset
+
+The notebook downloads the Goodreads 100k books dataset via `kagglehub`:
+
+- Kaggle dataset: `mdhamani/goodreads-books-100k`
+
+The download path is printed in the notebook so you can inspect the files locally.
+
+## Notebooks
+
+- `notebook/data_exploration.ipynb`: Loads the dataset, inspects schema and missing values, and performs initial cleaning steps.
+- `jupyter_setup.ipynb`: Quick guide for setting up Jupyter in a fresh environment.
+
+## Roadmap Ideas
+
+- Build embeddings for book descriptions and metadata.
+- Add a retrieval layer (e.g., vector search) for semantic recommendations.
+- Create a Gradio UI for interactive recommendations.
+- Add evaluation metrics and offline validation.
+
+## Notes
+
+If you plan to use `langchain-openai` or other API-backed features, create a `.env` file and provide the required API keys before running those parts.
+>>>>>>> 09770602cce82c177d51b9ac7274672edc63055d
