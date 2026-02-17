@@ -1,6 +1,5 @@
-# AI-Driven Book Recommender
-
-<<<<<<< HEAD
+# Book Recommender System Using OpenAI Embeddings and LangChain
+ 
 A full-stack book recommendation system that uses semantic similarity search and sentiment analysis to deliver personalized book recommendations. Built on the Goodreads 100k dataset, the system features a modern Gradio web interface and persistent vector embeddings for fast inference.
 
 ## Features
