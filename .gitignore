@@ -1,0 +1,11 @@
+```gitignore
+.env
+.venv
+__pycache__/
+.ipynb_checkpoints/
+
+# Large data files (ignore these, they're generated or too large for GitHub)
+data/processed/*.csv
+data/raw/*.txt
+data/chroma_db/
+```
